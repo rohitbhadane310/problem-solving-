@@ -13,7 +13,7 @@
 // class Solution {
 // public:
 //     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-        
+
 //         ListNode *l3 = new ListNode(0);
 //         ListNode *temp = l3;
 //         int carry = 0;
@@ -61,8 +61,6 @@
 //     }
 // };
 
-
-
 // 237. Delete Node in a Linked List
 
 // /**
@@ -76,14 +74,13 @@
 // class Solution {
 // public:
 //     void deleteNode(ListNode* node) {
-        
+
 //         ListNode *temp = node->next;
 //         node->val = temp->val;
 
 //         node->next = node->next->next;
 //     }
 // };
-
 
 // 160. Intersection of Two Linked Lists
 
@@ -98,7 +95,6 @@
 // class Solution {
 // public:
 //     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-        
 
 //         while(headA)
 //         {
@@ -151,7 +147,7 @@
 
 //             headB = headB->next;
 //         }
-        
+
 //         return NULL;
 //     }
 // };
@@ -167,7 +163,7 @@
 // class Solution {
 // public:
 //     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-        
+
 //         if(!headA || !headB) return NULL;
 
 //         ListNode *temp1 = headA;
@@ -198,10 +194,7 @@
 //     }
 // };
 
-
-
 // 141. Linked List Cycle
-
 
 // /**
 //  * Definition for singly-linked list.
@@ -214,7 +207,7 @@
 // class Solution {
 // public:
 //     bool hasCycle(ListNode *head) {
-        
+
 //         unordered_set<ListNode *>st;
 //         if(head == NULL)
 //         {
@@ -240,3 +233,26 @@
 //         return false;
 //     }
 // };
+
+// class Solution {
+// public:
+//     bool hasCycle(ListNode *head) {
+
+//         if(!head) return false;
+
+//         ListNode *fast = head , *slow = head;
+
+//         while(fast && fast->next)
+//         {
+//             slow = slow ->next;
+//             fast = fast->next->next;
+
+//             if(slow == fast)
+//             {
+//                 return true;
+//             }
+
+//         }
+
+//         return false;
+//     }
