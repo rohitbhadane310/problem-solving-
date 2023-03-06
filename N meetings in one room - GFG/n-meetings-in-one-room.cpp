@@ -23,7 +23,7 @@ class Solution
     
     int maxMeetings(int start[], int end[], int n)
     {
-        // Your code here\
+        // Your code here
         
         vector<pair<int , int>>ans(n);
         
@@ -34,7 +34,8 @@ class Solution
         
         sort(ans.begin() , ans.end() , comp);
         
-        int i = 0 , j = 1, count = 1;
+        int i = 0 , j = 1;
+        int count = 1;
         
         while(j < n)
         {
@@ -49,7 +50,6 @@ class Solution
                 j++;
             }
         }
-        
         return count;
     }
 };
