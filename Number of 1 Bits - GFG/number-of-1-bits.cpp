@@ -7,21 +7,20 @@ class Solution {
   public:
     int setBits(int N) {
         // Write Your Code here
-        
-        int bitStore[32];
-        int i = 0;
+        vector<int>ans;
+        int count = 0;
         
         while(N > 0)
         {
-            bitStore[i] = N % 2;
+            int val = N % 2;
+            ans.push_back(val);
+            
             N = N / 2;
-            i++;
         }
         
-        int count = 0;
-        for(int i = 0; i < 32; i++)
+        for(int i = 0; i < ans.size(); i++)
         {
-            if(bitStore[i] == 1)
+            if(ans[i] == 1)
             {
                 count++;
             }
